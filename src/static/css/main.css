@@ -1,0 +1,124 @@
+/* styles the navbar */
+.navbar {
+    background-color: slateblue;
+    border-bottom: 0.15rem solid #000000;
+    min-height: 80px;
+}
+
+.nav-link, 
+.navbar-brand {
+    color: #ffffff!important;
+    font-size: 1.75rem!important;
+}
+
+.nav-link {
+    padding-left: 1.5em!important;
+    padding-right: 1.5em!important;
+}
+
+.navbar-brand {
+    padding: 1rem;
+    border: 0.2rem solid #ffffff;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+    transform: scale(1.25);
+    background-color: royalblue;
+}
+
+/* styles all of the text */
+* {
+    font-family: "Lato", sans-serif;
+}
+
+h1,
+small {
+    font-family: "Roboto Mono", sans-serif;
+}
+
+small {
+    font-size: 0.75em!important;
+}
+
+.nav-link,
+.navbar-brand,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Ubuntu", monospace;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+/* styles header of page */
+.page-header {
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+/* adds background image */
+#background {
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-image: url("../img/bg.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    position: relative;
+} 
+
+/* blinking class for underscores */
+.blinking {
+    animation: 1s underscoreblink step-end infinite;
+}
+
+@keyframes underscoreblink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.typing-demo {
+    width: 47ch;
+    animation: typing 5s steps(47), blink 1s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.1em solid;
+}
+  
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+    
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+/* format icons */
+.icon {
+    color: slateblue;
+}
+
+.icon:hover {
+    color: royalblue;
+}
+
+/* style the footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+  
