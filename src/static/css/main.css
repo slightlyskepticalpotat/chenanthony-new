@@ -2,7 +2,7 @@
 .navbar {
     background-color: slateblue;
     border-bottom: 0.15rem solid #000000;
-    min-height: 80px;
+    height: 80px;
 }
 
 .nav-link, 
@@ -113,12 +113,23 @@ p {
 }
 
 /* style the footer */
-.footer {
+.footer,
+.resume-footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
-    color: #ffffff;
+    height: 140px;
 }
   
+.footer {
+    color: #ffffff;
+}
+
+/* style resume page */
+.resume {
+    overflow: hidden;
+    height: calc(100vh - 80px - 124px);
+    width: 100vw;
+}
