@@ -46,8 +46,9 @@ h4,
 h5,
 h6,
 small,
-span {
-    font-family: "Roboto Mono", sans-serif;
+span,
+button {
+    font-family: "Roboto Mono", sans-serif!important;
 }
 
 small {
@@ -162,4 +163,22 @@ p {
 
 .alert-light {
     border: 0.2rem solid slateblue!important;
+}
+
+.card-image {
+    height: 256px;
+    object-fit: contain;
+}
+
+.card-border {
+    border-width: 0.2rem!important;
+}
+
+.card-border:hover {
+    border-color: slateblue!important;
+}
+
+/* style back to top icon */
+#back-to-top:hover {
+    background-color: royalblue;
 }

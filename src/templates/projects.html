@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=.1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="{{ url_for("static", filename="img/favicon.ico") }}" type="image/x-icon">
@@ -71,6 +71,55 @@
                 <span>All of my projects should be open-sourced. Let me know if you have any suggestions about them.</span>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+            {% for i in range(0, all|length, 3) %}
+                <div class="row">
+                    {% for j in range(i, i + 3) %}
+                        {% if j < all|length %}
+                            <div class="col-sm-4 mb-4">
+                                <div class="card card-border">
+                                    <img class="card-img-top card-image" data-bs-toggle="modal" data-bs-target="#modal{{  j  }}" loading="lazy" src={{  all[j]["img"]  }} alt="Network error, image failed to load.">
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <h4 class="card-title" data-bs-toggle="modal" data-bs-target="#modal{{  j  }}">{{  all[j]["name"]  }}</h4>
+                                            {% for tag in all[j]["tags"] %}
+                                                <span class="badge badge-pill">{{  tag  }}</span>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="pt-2 d-flex justify-content-around">
+                                            <i class="fas fa-info fa-2x px-2 icon" data-bs-toggle="modal" data-bs-target="#modal{{  j  }}"></i>
+                                            <a href={{  all[j]["url"]  }}>
+                                                <i class="fas fa-external-link-alt fa-2x px-2 icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="modal{{  j  }}" tabindex="-1" aria-labelledby="#modal{{  j  }}Label" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h3 class="modal-title" id="modal{{  j  }}Label">{{  all[j]["name"]  }}</h3>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    {% for tag in all[j]["tags"] %}
+                                                        <span class="badge badge-pill">{{  tag  }}</span>
+                                                    {% endfor %}
+                                                    <img class="card-img-top card-image mt-2 mb-2" loading="lazy" src={{  all[j]["img"]  }} alt="Network error, image failed to load.">
+                                                    <p>{{  all[j]["info"]  }}</p>
+                                                    <div class="text-center mt-2">
+                                                        <a href={{  all[j]["url"]  }}>
+                                                            <i class="fas fa-external-link-alt fa-3x px-3 icon"></i>
+                                                        </a>    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
         </div>
     </body>
 
