@@ -40,7 +40,13 @@
 }
 
 h1,
-small {
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+span {
     font-family: "Roboto Mono", sans-serif;
 }
 
@@ -49,12 +55,8 @@ small {
 }
 
 .nav-link,
-.navbar-brand,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.navbar-brand
+{
     font-family: "Ubuntu", monospace;
 }
 
@@ -139,4 +141,25 @@ p {
     overflow: hidden;
     height: calc(100vh - 80px - 124px);
     width: 100vw;
+}
+
+/* style project page */
+.blog-card-img {
+    max-height: 192px;
+    object-fit: cover;
+    border: 0.2rem solid slateblue;
+}
+
+.blog-card-img:hover {
+    max-height: unset;
+}
+
+.badge-pill {
+    background-color: slateblue!important;
+    font-family: "Ubuntu", monospace;
+    font-size: 0.75em!important;
+}
+
+.alert-light {
+    border: 0.2rem solid slateblue!important;
 }
