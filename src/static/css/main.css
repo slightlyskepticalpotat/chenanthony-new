@@ -14,6 +14,9 @@
 .nav-link {
     padding-left: 1.5em!important;
     padding-right: 1.5em!important;
+    height: calc(80px - 0.15rem)!important;
+    align-items: center!important;
+    display: flex!important;
 }
 
 .navbar-brand {
@@ -22,9 +25,13 @@
 }
 
 .nav-link:hover,
+.navbar-brand:hover,
+.active {
+    background-color: royalblue;
+}
+
 .navbar-brand:hover {
     transform: scale(1.25);
-    background-color: royalblue;
 }
 
 /* styles all of the text */

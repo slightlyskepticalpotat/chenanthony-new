@@ -17,6 +17,20 @@ def pgp():
 def resume():
     return render_template("resume.html")
 
+@app.route("/projects")
+def projects():
+    # featured section with old blog-like cards, then the rest of the projects in random order with old project cards
+    return "Under Construction"
+
+@app.route("/gallery")
+def gallery():
+    # radically different entire-page (except header and footer) gallery of images
+    return "Under Construction"
+
+@app.route("/links")
+def links():
+    pass
+
 def get_update_date(name):
     # gets ratelimited too quickly
     data = requests.get(f"https://api.github.com/repos/slightlyskepticalpotat/chenanthony-new/commits?path=/src/templates/{name}.html&page=1&per_page=1")
