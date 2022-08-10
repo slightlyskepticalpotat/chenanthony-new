@@ -29,7 +29,9 @@ def gallery():
 
 @app.route("/links")
 def links():
-    pass
+    stored_links = [["Devpost", "https://devpost.com/slightlyskepticalpotat"], ["DMOJ", "https://dmoj.ca/user/slightlyskepticalpotat"], ["MGCI Robotics", "https://mgcirobotics.com/"], ["The Reckoner", "https://www.thereckoner.ca/author/anthonychen/"], ["Website Code", "https://github.com/slightlyskepticalpotat/chenanthony-new"], ["MGCI Math", "https://mgcimath.ca"], ["PyPi", "https://pypi.org/search/?q=slightlyskepticalpotat"], ["MGCI CTF Club", "https://ctfmgci.pythonanywhere.com/"], ["Audeamus 8574", "https://www.thebluealliance.com/team/8574/"]]
+    stored_links.sort(key = lambda x: x[0])
+    return render_template("links.html", links = stored_links)
 
 def get_update_date(name):
     # gets ratelimited too quickly
