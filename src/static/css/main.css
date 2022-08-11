@@ -214,4 +214,8 @@ p {
     position: absolute; 
     right: 1rem;
 }
-  
+
+.img-fluid {
+    height: 90%!important;
+    width: auto!important;
+}
