@@ -42,7 +42,22 @@
                     <div class="col-lg-3 mb-4 mb-lg-0">
                         {% for j in range(i, i + 4) %}
                             {% if j < photos|length %}
-                                <img class="w-100 rounded mb-4" data-bs-toggle="modal" data-bs-target="#modal{{  j  }}" src="{{ url_for("static", filename='/img/gallery/' + photos[j]) }}" alt="Network error, image failed to load.">
+                                <img class="w-100 rounded mb-4 gallery-image" data-bs-toggle="modal" data-bs-target="#modal{{  j  }}" src="{{ url_for("static", filename='/img/gallery/' + photos[j]['file']) }}" alt="Network error, image failed to load.">
+
+                                <div class="modal fade" id="modal{{  j  }}" tabindex="-1" aria-labelledby="#modal{{  j  }}Label" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content gallery-modal text-center">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title w-100" id="modal{{  j  }}Label">{{  photos[j]['title']  }}</h3>
+                                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img class="w-100 rounded mb-4" data-bs-toggle="modal" data-bs-target="#modal{{  j  }}" src="{{ url_for("static", filename='/img/gallery/' + photos[j]['file']) }}" alt="Network error, image failed to load.">
+                                                <p class="w-100">{{  photos[j]['info']  }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             {% endif %}
                         {% endfor %}
                     </div>

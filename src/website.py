@@ -28,7 +28,7 @@ def projects():
 
 @app.route("/gallery")
 def gallery():
-    images = ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp", "10.webp", "11.webp", "12.webp", "13.webp", "14.webp", "15.webp", "16.webp"]
+    images = [{"file": "1.webp", "title": "North York, Canada", "info": ""}, {"file": "2.webp", "title": "Toronto, Canada", "info": ""}, {"file": "3.webp", "title": "North York, Canada", "info": ""}, {"file": "4.webp", "title": "Houston, United States", "info": ""}, {"file": "5.webp", "title": "Etobicoke, Canada", "info": ""}, {"file": "6.webp", "title": "Saint-Adolphe-d'Howard, Canada", "info": ""}, {"file": "7.webp", "title": "Dorval, Canada", "info": ""}, {"file": "8.webp", "title": "Montreal, Canada", "info": ""}, {"file": "9.webp", "title": "Longueuil, Canada", "info": ""}, {"file": "10.webp", "title": "Montreal, Canada", "info": ""}, {"file": "11.webp", "title": "Montreal, Canada", "info": ""}, {"file": "12.webp", "title": "Montreal, Canada", "info": ""}, {"file": "13.webp", "title": "Montreal, Canada", "info": ""}, {"file": "14.webp", "title": "Toronto, Canada", "info": ""}, {"file": "15.webp", "title": "Scarborough, Canada", "info": ""}, {"file": "16.webp", "title": "Toronto, Canada", "info": ""}]
     random.shuffle(images)
     return render_template("gallery.html", photos = images)
 

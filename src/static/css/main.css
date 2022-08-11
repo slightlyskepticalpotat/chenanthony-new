@@ -196,3 +196,22 @@ p {
 .gallery-copyright {
     color: #ffffff!important;
 }
+
+.gallery-image {
+    border: 0.2rem solid #000000!important;
+}
+
+.gallery-image:hover {
+    border-color: slateblue!important;
+}
+
+.gallery-modal {
+    background-color: #000000!important;
+    color: #ffffff!important;
+}
+
+.btn-close-white { 
+    position: absolute; 
+    right: 1rem;
+}
+  
