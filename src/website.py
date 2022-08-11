@@ -1,4 +1,3 @@
-import os
 import random
 import requests
 from flask import Flask, render_template, redirect, url_for
@@ -29,7 +28,7 @@ def projects():
 
 @app.route("/gallery")
 def gallery():
-    images = os.listdir("src/static/img/gallery/")
+    images = ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp", "10.webp", "11.webp", "12.webp", "13.webp", "14.webp", "15.webp", "16.webp"]
     random.shuffle(images)
     return render_template("gallery.html", photos = images)
 
