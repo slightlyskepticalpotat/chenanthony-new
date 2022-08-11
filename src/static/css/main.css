@@ -182,3 +182,17 @@ p {
 #back-to-top:hover {
     background-color: royalblue;
 }
+
+/* style gallery page */
+.gallery-page {
+    background-color: #000000;
+}
+
+.gallery-heading {
+    color: #ffffff;
+    text-align: center;
+}
+
+.gallery-copyright {
+    color: #ffffff!important;
+}

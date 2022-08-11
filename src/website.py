@@ -1,3 +1,4 @@
+import os
 import random
 import requests
 from flask import Flask, render_template, redirect, url_for
@@ -28,8 +29,9 @@ def projects():
 
 @app.route("/gallery")
 def gallery():
-    # radically different entire-page (except header and footer) gallery of images
-    return "Under Construction"
+    images = os.listdir("src/static/img/gallery/")
+    random.shuffle(images)
+    return render_template("gallery.html", photos = images)
 
 @app.route("/links")
 def links():

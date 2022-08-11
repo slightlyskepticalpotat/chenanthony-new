@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ url_for("static", filename="css/main.css") }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <title>Anthony Chen: {{ title }}</title>
+    <title>Anthony Chen: Gallery</title>
     <nav class="navbar sticky-top navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="/">Anthony Chen</a>
@@ -21,23 +21,33 @@
             <div class="navbar-nav ms-auto">
               <a class="nav-link" href="/resume">Resume</a>
               <a class="nav-link" href="/projects">Projects</a>
-              <a class="nav-link" href="/gallery">Gallery</a>
-              <a class="nav-link" href="/links">Links</a>
+              <a class="nav-link active" href="/gallery">Gallery</a>
+              <a class="nav-link " href="/links">Links</a>
             </div>
           </div>
         </div>
       </nav>
   </head>
   
-  <body>
+    <body class="gallery-page">
         <div class="container">
-            <div class="page-header">
-                <h1>{{  title  }}<span class="blinking">_</span></span></h1>
+            <div class="page-header gallery-heading">
+                <h3>"they capture a moment that's gone forever, impossible to reproduce"<span class="blinking">_</span></span></h3>
             </div>  
         </div>
         <hr>
         <div class="container">
-            <pre>{{  text  }}</pre>
+            <div class="row">
+                {% for i in range(0, photos|length, 4) %}
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        {% for j in range(i, i + 4) %}
+                            {% if j < photos|length %}
+                                <img class="w-100 rounded mb-4" data-bs-toggle="modal" data-bs-target="#modal{{  j  }}" src="{{ url_for("static", filename='/img/gallery/' + photos[j]) }}" alt="Network error, image failed to load.">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </body>
 
@@ -67,7 +77,7 @@
                 </li>
             </ul>
         </div>
-        <div class="text-center">
+        <div class="text-center gallery-copyright">
             <p><small>Copyright Anthony Chen, 2019–2022. Built with Flask and Bootstrap.</small></p>
         </div>
     </footer>
