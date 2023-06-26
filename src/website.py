@@ -1,7 +1,7 @@
 import random
 import requests
 import datetime
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, send_from_directory
 
 app = Flask(__name__)
 
@@ -37,6 +37,11 @@ def links():
     stored_links = [{"name": "Devpost", "url": "https://devpost.com/slightlyskepticalpotat"}, {"name": "DMOJ", "url": "https://dmoj.ca/user/slightlyskepticalpotat"}, {"name": "MGCI Robotics", "url": "https://mgcirobotics.com/"}, {"name": "The Reckoner", "url": "https://www.thereckoner.ca/author/anthonychen/"}, {"name": "Website Code", "url": "https://github.com/slightlyskepticalpotat/chenanthony-new"}, {"name": "MGCI Math", "url": "https://mgcimath.ca"}, {"name": "PyPi", "url": "https://pypi.org/search/?q=slightlyskepticalpotat"}, {"name": "MGCI CTF Club", "url": "https://ctfmgci.pythonanywhere.com/"}, {"name": "Audeamus 8574", "url": "https://www.thebluealliance.com/team/8574/"}]
     stored_links.sort(key=lambda x: x["name"])
     return render_template("links.html", links=stored_links, time=datetime.datetime.now())
+
+
+@app.route("/share/<path:path>")
+def share_file(path):
+    return send_from_directory("share", path)
 
 
 def get_update_date(name):
