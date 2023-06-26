@@ -45,9 +45,7 @@ h3,
 h4,
 h5,
 h6,
-small,
-span,
-button {
+span {
     font-family: "Roboto Mono", sans-serif!important;
 }
 
@@ -56,7 +54,8 @@ small {
 }
 
 .nav-link,
-.navbar-brand
+.navbar-brand,
+small
 {
     font-family: "Ubuntu", monospace;
 }
@@ -83,8 +82,8 @@ p {
 }
 
 .typing-demo {
-    width: 47ch;
-    animation: typing 5s steps(47), blink 1s step-end infinite alternate;
+    width: 23ch;
+    animation: typing 2.5s steps(23), blink 1s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 0.1em solid;
@@ -173,9 +172,9 @@ p {
     right: 1rem;
 }
 
-.img-fluid {
-    height: 90%!important;
-    width: auto!important;
+.img-profile {
+    max-height: 75%!important;
+    max-width: 100%;
 }
 
 /* make accessibility text invisible */
