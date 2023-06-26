@@ -38,13 +38,13 @@
         </div>
         <hr>
         <div class="container">
-            <h2 class="mb-4">Featured</h2>
+            <h2 class="mb-4">Featured ({{ featured|length }})</h2>
             <div class="alert alert-light alert-dismissible fade show" role="alert">
-                <span>Some of the images have been cropped because of sizing constraints. Hover over them to see the full image.</span>
+                <span>Some of the following images have been cropped because of tight sizing constraints. Hover to see the full-size images.</span>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             {% for project in featured %}
-                <div class="card mb-4">
+                <div class="card mb-4 card-border">
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <img src={{  project["img"]  }} loading="lazy" class="card-img blog-card-img" alt="Network error, image failed to load.">
@@ -67,9 +67,9 @@
                 </div>
             {% endfor %}
             <br>
-            <h2 class="mb-4">All Projects</h2>
+            <h2 class="mb-4">All ({{ all|length }})</h2>
             <div class="alert alert-light alert-dismissible fade show" role="alert">
-                <span>All of my projects should be open-sourced. Let me know if you have any suggestions about them.</span>
+                <span>Most of my projects should be open-sourced and available on GitHub. Let me know if you have any comments about them!</span>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             {% for i in range(0, all|length, 3) %}
@@ -101,9 +101,11 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    {% for tag in all[j]["tags"] %}
-                                                        <span class="badge badge-pill">{{  tag  }}</span>
-                                                    {% endfor %}
+                                                    <div class="text-center">
+                                                        {% for tag in all[j]["tags"] %}
+                                                            <span class="badge badge-pill">{{  tag  }}</span>
+                                                        {% endfor %}
+                                                    </div>
                                                     <img class="card-img-top card-image mt-2 mb-2" loading="lazy" src={{  all[j]["img"]  }} alt="Network error, image failed to load.">
                                                     <p>{{  all[j]["info"]  }}</p>
                                                     <div class="text-center mt-2">
