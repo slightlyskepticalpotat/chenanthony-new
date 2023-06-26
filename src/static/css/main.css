@@ -60,7 +60,8 @@ small
     font-family: "Ubuntu", monospace;
 }
 
-p {
+p, 
+.list-group-item {
     font-size: 1.5em;
 }
 
