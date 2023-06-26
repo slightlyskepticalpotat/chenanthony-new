@@ -40,8 +40,13 @@ def links():
 
 
 @app.route("/share/<path:path>")
-def share_file(path):
+def share(path):
     return send_from_directory("share", path)
+
+
+@app.route("/writing")
+def writing():
+    return render_template("writing.html", time=datetime.datetime.now())
 
 
 def get_update_date(name):
