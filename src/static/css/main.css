@@ -71,17 +71,6 @@ p {
     padding-bottom: 1em;
 }
 
-/* adds background image */
-#background {
-    height: calc(100vh - 80px);
-    width: 100%;
-    background-image: url("../img/bg.webp");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; 
-    position: relative;
-} 
-
 /* blinking class for underscores */
 .blinking {
     animation: 1s underscoreblink step-end infinite;
@@ -133,10 +122,6 @@ p {
     height: 150px;
 }
   
-.footer {
-    color: #ffffff;
-}
-
 /* style resume page */
 .resume {
     overflow: hidden;
