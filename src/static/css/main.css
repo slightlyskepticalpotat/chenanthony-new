@@ -112,8 +112,7 @@ p,
 }
 
 /* style the footer */
-.footer,
-.resume-footer {
+.footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -125,7 +124,7 @@ p,
 /* style resume page */
 .resume {
     overflow: hidden;
-    height: calc(100vh - 75px - 134px);
+    height: calc(100vh - 75px);
     width: 100vw;
 }
 
