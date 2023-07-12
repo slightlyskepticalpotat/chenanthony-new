@@ -57,6 +57,26 @@ def writing():
     return render_template("writing.html", time=datetime.datetime.now())
 
 
+@app.errorhandler(404)
+def error_404(e):
+    return render_template("default.html", title="Not Found", text="404 Not Found", time=datetime.datetime.now()), 404
+
+
+@app.errorhandler(403)
+def error_403(e):
+    return render_template("default.html", title="Forbidden", text="403 Forbidden", time=datetime.datetime.now()), 403
+
+
+@app.errorhandler(410)
+def error_410(e):
+    return render_template("default.html", title="Gone", text="410 Gone", time=datetime.datetime.now()), 410
+
+
+@app.errorhandler(500)
+def error_500(e):
+    return render_template("default.html", title="Internal Server Error", text="500 Internal Server Error", time=datetime.datetime.now()), 500
+
+
 def get_update_date(name):
     # gets ratelimited too quickly
     data = requests.get(f"https://api.github.com/repos/slightlyskepticalpotat/chenanthony-new/commits?path=/src/templates/{name}.html&page=1&per_page=1")
