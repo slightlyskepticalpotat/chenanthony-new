@@ -45,9 +45,11 @@ def links():
     return render_template("links.html", links=stored_links, time=datetime.datetime.now())
 
 
-@app.route("/share/<path:path>")
-def share(path):
-    return send_from_directory("share", path)
+"""
+@app.route("/files/<path:path>")
+def files(path):
+    return send_from_directory("files", path)
+"""
 
 
 @app.route("/writing")
