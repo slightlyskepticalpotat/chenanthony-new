@@ -182,7 +182,7 @@ p,
     display: none;
 }
 
-/* styles the file fancyindex page */
-td.link {
+/* styles the fancyindex page links */
+.a {
     color: #0d6efd;
 }
