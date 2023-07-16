@@ -181,3 +181,8 @@ p,
 .invis-text {
     display: none;
 }
+
+/* styles the file fancyindex page */
+td.link {
+    color: #0d6efd;
+}
