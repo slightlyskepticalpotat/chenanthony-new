@@ -112,6 +112,14 @@ p,
     color: royalblue;
 }
 
+a svg path {
+    fill: slateblue;
+}
+
+a svg:hover path {
+    fill: royalblue;
+}
+
 /* style the footer */
 .footer {
     position: fixed;
