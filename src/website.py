@@ -1,6 +1,5 @@
 import random
 import requests
-import datetime
 from flask import Flask, render_template, url_for, send_from_directory
 
 app = Flask(__name__)
@@ -8,19 +7,19 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html", time=datetime.datetime.now())
+    return render_template("index.html")
 
 
 @app.route("/pgp")
 def pgp():
     with app.open_resource("static/pgp.txt") as file:
         pgp_key = file.read().decode("utf-8")
-    return render_template("default.html", title="PGP Key", text=pgp_key, time=datetime.datetime.now())
+    return render_template("default.html", title="PGP Key", text=pgp_key)
 
 
 @app.route("/resume")
 def resume():
-    return render_template("resume.html", time=datetime.datetime.now())
+    return render_template("resume.html")
 
 
 @app.route("/projects")
@@ -35,14 +34,14 @@ def projects():
         project["tags"] = sorted(project["tags"])
     all_projects += featured_projects
     random.shuffle(all_projects)
-    return render_template("projects.html", featured=featured_projects, all=all_projects, time=datetime.datetime.now())
+    return render_template("projects.html", featured=featured_projects, all=all_projects)
 
 
 @app.route("/links")
 def links():
     stored_links = [{"name": "Devpost", "url": "https://devpost.com/slightlyskepticalpotat"}, {"name": "DMOJ", "url": "https://dmoj.ca/user/slightlyskepticalpotat"}, {"name": "MGCI Robotics", "url": "https://mgcirobotics.com/"}, {"name": "The Reckoner", "url": "https://www.thereckoner.ca/author/anthonychen/"}, {"name": "Website Code", "url": "https://github.com/slightlyskepticalpotat/chenanthony-new"}, {"name": "MGCI Math", "url": "https://mgcimath.ca"}, {"name": "PyPi", "url": "https://pypi.org/search/?q=slightlyskepticalpotat"}, {"name": "MGCI CTF", "url": "https://ctfmgci.jonathanw.dev/"}, {"name": "Audeamus 8574", "url": "https://www.thebluealliance.com/team/8574/"}, {"name": "Dogecoin Snap", "url": "https://snapcraft.io/dogecoin-unofficial"}, {"name": "Waterloo SE Webring", "url": "https://se-webring.xyz/"}, {"name": "Replit", "url": "https://replit.com/@slightlyskepticalpotat"}, {"name": "Old GitHub", "url": "https://github.com/nothingspecialreally"}, {"name": "TOPS Program", "url": "https://www.topsprogram.ca/"}, {"name": "Stack Overflow", "url": "https://stackoverflow.com/users/8566103/xyzzy"}]
     stored_links.sort(key=lambda x: x["name"])
-    return render_template("links.html", links=stored_links, time=datetime.datetime.now())
+    return render_template("links.html", links=stored_links)
 
 
 """
@@ -54,27 +53,27 @@ def files(path):
 
 @app.route("/writing")
 def writing():
-    return render_template("writing.html", time=datetime.datetime.now())
+    return render_template("writing.html")
 
 
 @app.errorhandler(404)
 def error_404(e):
-    return render_template("default.html", title="Not Found", text="404 Not Found", time=datetime.datetime.now()), 404
+    return render_template("default.html", title="Not Found", text="404 Not Found"), 404
 
 
 @app.errorhandler(403)
 def error_403(e):
-    return render_template("default.html", title="Forbidden", text="403 Forbidden", time=datetime.datetime.now()), 403
+    return render_template("default.html", title="Forbidden", text="403 Forbidden"), 403
 
 
 @app.errorhandler(410)
 def error_410(e):
-    return render_template("default.html", title="Gone", text="410 Gone", time=datetime.datetime.now()), 410
+    return render_template("default.html", title="Gone", text="410 Gone"), 410
 
 
 @app.errorhandler(500)
 def error_500(e):
-    return render_template("default.html", title="Internal Server Error", text="500 Internal Server Error", time=datetime.datetime.now()), 500
+    return render_template("default.html", title="Internal Server Error", text="500 Internal Server Error"), 500
 
 
 def get_update_date(name):

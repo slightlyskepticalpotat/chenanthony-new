@@ -21,7 +21,8 @@
 
 .navbar-brand {
     padding: 1rem;
-    border: 0.2rem solid #ffffff;
+    border-right: 0.15rem solid #ffffff;
+    border-bottom: 0.15rem solid #ffffff;
 }
 
 .nav-link:hover,
@@ -73,7 +74,7 @@ p,
 
 /* blinking class for underscores */
 .blinking {
-    animation: 1s underscoreblink step-end infinite;
+    animation: 2s underscoreblink step-end infinite;
 }
 
 @keyframes underscoreblink {
