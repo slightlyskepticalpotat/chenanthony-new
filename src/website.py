@@ -1,6 +1,6 @@
 import random
 import requests
-from flask import Flask, render_template, url_for, send_from_directory
+from flask import Flask, render_template, url_for, send_from_directory, Response
 
 app = Flask(__name__)
 
@@ -12,9 +12,7 @@ def index():
 
 @app.route("/pgp")
 def pgp():
-    with app.open_resource("static/pgp.txt") as file:
-        pgp_key = file.read().decode("utf-8")
-    return render_template("default.html", title="PGP Key", text=pgp_key)
+    return send_from_directory("static", "pgp.txt")
 
 
 @app.route("/resume")
