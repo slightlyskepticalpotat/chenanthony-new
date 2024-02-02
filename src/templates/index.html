@@ -24,6 +24,7 @@
                 <a class="nav-link" href="/resume">Résumé</a>
                 <!-- <a class="nav-link" href="/writing">Writing</a> -->
                 <a class="nav-link" href="/links">Links</a>
+                <a class="nav-link fas fa-sun fa-3x px-8 icon" id="btnSwitch"></span></a>
             </div>
           </div>
         </div>
@@ -102,10 +103,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
     <script src="{{ url_for("static", filename="js/vanilla-back-to-top.min.js") }}"></script>
-    <script>addBackToTop({
+        <script>
+    addBackToTop({
         diameter: 64,
         backgroundColor: "slateblue",
         textColor: "#ffffff"
-      })
+    })
+    document.getElementById("btnSwitch").addEventListener("click", ()=>{
+        if (document.documentElement.getAttribute("data-bs-theme") == "dark") {
+            document.documentElement.setAttribute("data-bs-theme", "light")
+        } else {
+            document.documentElement.setAttribute("data-bs-theme", "dark")
+        }
+    })
     </script>
 </html>
