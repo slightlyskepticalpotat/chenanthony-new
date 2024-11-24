@@ -39,9 +39,6 @@
         <hr>
         <div class="container">
             <h2 class="mb-4">Featured ({{ featured|length }})</h2>
-            <div class="alert alert-light fade show" role="alert">
-                <span>Some of the following images have been cropped because of the tight design constraints. Hover to see the full-size images.</span>
-            </div>
             {% for project in featured %}
                 <div class="card mb-4 card-border">
                     <div class="row no-gutters">

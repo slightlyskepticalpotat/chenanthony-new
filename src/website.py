@@ -276,33 +276,30 @@ def projects():
 def links():
     stored_links = [
         {"name": "Devpost", "url": "https://devpost.com/slightlyskepticalpotat"},
-        {"name": "DMOJ", "url": "https://dmoj.ca/user/slightlyskepticalpotat"},
+        {"name": "DMOJ", "url": "https://dmoj.ca/user/anthony_"},
         {"name": "MGCI Robotics", "url": "https://mgcirobotics.com/"},
         {
             "name": "Website Code",
             "url": "https://github.com/slightlyskepticalpotat/chenanthony-new",
         },
         {"name": "MGCI Math", "url": "https://mgcimath.ca"},
-        {"name": "PyPi", "url": "https://pypi.org/search/?q=slightlyskepticalpotat"},
+        {"name": "PyPI", "url": "https://pypi.org/search/?q=slightlyskepticalpotat"},
         {"name": "xCTF", "url": "https://ctf.jonathanw.dev/"},
         {"name": "Audeamus 8574", "url": "https://www.thebluealliance.com/team/8574/"},
         {"name": "Dogecoin Snap", "url": "https://snapcraft.io/dogecoin-unofficial"},
-        {"name": "Waterloo SE Webring", "url": "https://se-webring.xyz/"},
+        {"name": "SE Webring", "url": "https://se-webring.xyz/"},
+        {"name": "New GitHub", "url": "https://github.com/slightlyskepticalpotat"},
         {"name": "Old GitHub", "url": "https://github.com/nothingspecialreally"},
-        {
-            "name": "Stack Overflow",
-            "url": "https://stackoverflow.com/users/8566103/xyzzy",
-        },
         {"name": "Waterloo Rocketry", "url": "https://www.waterloorocketry.com/"},
         {"name": "UWMap", "url": "https://uwmap.live/"},
         {
             "name": "Waterloo SE",
-            "url": "https://uwaterloo.ca/future-students/programs/software-engineering",
+            "url": "https://uwaterloo.ca/software-engineering/",
         },
         {"name": "mathNEWS", "url": "https://mathnews.uwaterloo.ca/"},
         {"name": "iWarrior", "url": "https://iwarrior.uwaterloo.ca/"},
     ]
-    stored_links.sort(key=lambda link: link["name"])
+    stored_links.sort(key=lambda link: link["name"].lower())
     return render_template("links.html", links=stored_links)
 
 
