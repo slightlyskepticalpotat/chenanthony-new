@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance
+After=network.target
+
+[Service]
+User=chenanthony365
+Group=www-data
+WorkingDirectory=/home/chenanthony365/chenanthony-new/src
+Environment="PATH=/bin"
+ExecStart=/bin/gunicorn --workers 2 --bind unix:website.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
