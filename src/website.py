@@ -71,13 +71,12 @@ def projects():
             "tags": ["aes", "security", "cpp", "make", "password-manager"],
         },
     ]
-    for project in featured_projects:
-        project["tags"].sort()
+    [project["tags"].sort() for project in featured_projects]
     random.shuffle(featured_projects)
     all_projects = [
         {
             "name": "visuals",
-            "info": "Cross-platform OpenGL audio visualiser written with GLFW, include several GLSL shaders. Audio data retrieved with SFML and downsampled programmatically.",
+            "info": "Cross-platform OpenGL audio visualiser written with GLFW, including several GLSL shaders. Audio data retrieved with SFML and downsampled programmatically.",
             "url": "https://github.com/slightlyskepticalpotat/visuals",
             "img": url_for("static", filename="img/vis.webp"),
             "tags": ["opengl", "glsl", "glfw", "sfml", "music"],
@@ -265,9 +264,8 @@ def projects():
         },
     ]
     # projects that don't have github repos: shad-tile
-    for project in all_projects:
-        project["tags"].sort()
-    all_projects += featured_projects
+    [project["tags"].sort() for project in all_projects]
+    all_projects.extend(featured_projects)
     random.shuffle(all_projects)
     return render_template(
         "projects.html", featured=featured_projects, all=all_projects
@@ -286,7 +284,7 @@ def links():
         },
         {"name": "MGCI Math", "url": "https://mgcimath.ca"},
         {"name": "PyPi", "url": "https://pypi.org/search/?q=slightlyskepticalpotat"},
-        {"name": "MGCI CTF", "url": "https://ctfmgci.jonathanw.dev/"},
+        {"name": "xCTF", "url": "https://ctf.jonathanw.dev/"},
         {"name": "Audeamus 8574", "url": "https://www.thebluealliance.com/team/8574/"},
         {"name": "Dogecoin Snap", "url": "https://snapcraft.io/dogecoin-unofficial"},
         {"name": "Waterloo SE Webring", "url": "https://se-webring.xyz/"},
@@ -302,24 +300,15 @@ def links():
             "url": "https://uwaterloo.ca/future-students/programs/software-engineering",
         },
         {"name": "mathNEWS", "url": "https://mathnews.uwaterloo.ca/"},
+        {"name": "iWarrior", "url": "https://iwarrior.uwaterloo.ca/"},
     ]
-    stored_links.sort(key=lambda x: x["name"])
+    stored_links.sort(key=lambda link: link["name"])
     return render_template("links.html", links=stored_links)
 
 
 @app.errorhandler(404)
 def error_404(e):
     return render_template("default.html", title="Not Found", text="404 Not Found"), 404
-
-
-@app.errorhandler(403)
-def error_403(e):
-    return render_template("default.html", title="Forbidden", text="403 Forbidden"), 403
-
-
-@app.errorhandler(410)
-def error_410(e):
-    return render_template("default.html", title="Gone", text="410 Gone"), 410
 
 
 @app.errorhandler(500)
