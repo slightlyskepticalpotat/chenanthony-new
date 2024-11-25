@@ -1,12 +1,12 @@
 {% include 'includes/begin.html' %}
 
 <head>
-    {% include 'includes/header_scripts.html' %}
-    {% include 'includes/header.html' %}
     <title>Projects</title>
+    {% include 'includes/header_scripts.html' %}
 </head>
 
 <body>
+    {% include 'includes/header.html' %}
     {% with title="Projects" %}
     {% include 'includes/title.html' %}
     {% endwith %}
@@ -95,8 +95,8 @@
     </div>
     {% endfor %}
     </div>
+    {% include 'includes/footer.html' %}
+    {% include 'includes/footer_scripts.html' %}
 </body>
-{% include 'includes/footer.html' %}
-{% include 'includes/footer_scripts.html' %}
 
 </html>

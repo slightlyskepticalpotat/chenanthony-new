@@ -1,12 +1,12 @@
 {% include 'includes/begin.html' %}
 
 <head>
-    {% include 'includes/header_scripts.html' %}
-    {% include 'includes/header.html' %}
     <title>Anthony</title>
+    {% include 'includes/header_scripts.html' %}
 </head>
 
 <body>
+    {% include 'includes/header.html' %}
     {% with title="Hello, I'm Anthony" %}
     {% include 'includes/title.html' %}
     {% endwith %}
@@ -35,9 +35,9 @@
             </div>
         </div>
     </div>
+    {% include 'includes/footer.html' %}
+    {% include 'includes/footer_scripts.html' %}
+    {% include 'includes/copyright.html' %}
 </body>
-{% include 'includes/footer.html' %}
-{% include 'includes/footer_scripts.html' %}
-{% include 'includes/copyright.html' %}
 
 </html>
