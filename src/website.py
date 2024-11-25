@@ -23,9 +23,9 @@ def resume():
 def projects():
     featured_projects = [
         {
-            "name": "chenanthony-new",
+            "name": "anthony-new",
             "info": "Responsive portfolio website built with industry-standard frameworks. Previously PHP-based, now runs on Flask. Hosted on a GCP instance.",
-            "url": "https://github.com/slightlyskepticalpotat/chenanthony-new",
+            "url": "https://github.com/slightlyskepticalpotat/anthony-new",
             "img": url_for("static", filename="img/website.webp"),
             "tags": ["css", "flask", "html", "python", "website"],
         },
@@ -280,7 +280,7 @@ def links():
         {"name": "MGCI Robotics", "url": "https://mgcirobotics.com/"},
         {
             "name": "Website Code",
-            "url": "https://github.com/slightlyskepticalpotat/chenanthony-new",
+            "url": "https://github.com/slightlyskepticalpotat/anthony-new",
         },
         {"name": "MGCI Math", "url": "https://mgcimath.ca"},
         {"name": "PyPI", "url": "https://pypi.org/search/?q=slightlyskepticalpotat"},
