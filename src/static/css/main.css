@@ -4,18 +4,18 @@
     height: 75px;
 }
 
-.nav-link, 
+.nav-link,
 .navbar-brand {
-    color: #ffffff!important;
-    font-size: 1.5em!important;
+    color: #ffffff !important;
+    font-size: 1.5em !important;
 }
 
 .nav-link {
-    padding-left: 1.5em!important;
-    padding-right: 1.5em!important;
-    height: 75px!important;
-    align-items: center!important;
-    display: flex!important;
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+    height: 75px !important;
+    align-items: center !important;
+    display: flex !important;
 }
 
 .navbar-brand {
@@ -46,21 +46,20 @@ h4,
 h5,
 h6,
 span {
-    font-family: "Roboto Mono", sans-serif!important;
+    font-family: "Roboto Mono", sans-serif !important;
 }
 
 small {
-    font-size: 0.75em!important;
+    font-size: 0.75em !important;
 }
 
 .nav-link,
 .navbar-brand,
-small
-{
+small {
     font-family: "Ubuntu", monospace;
 }
 
-p, 
+p,
 .list-group-item {
     font-size: 1.5em;
 }
@@ -89,13 +88,13 @@ p,
     overflow: hidden;
     border-right: 0.1em solid;
 }
-  
+
 @keyframes typing {
     from {
         width: 0
     }
 }
-    
+
 @keyframes blink {
     50% {
         border-color: transparent
@@ -128,7 +127,7 @@ a svg:hover path {
     text-align: center;
     height: 150px;
 }
-  
+
 /* style resume page */
 .resume {
     overflow: hidden;
@@ -148,13 +147,13 @@ a svg:hover path {
 }
 
 .badge-pill {
-    background-color: slateblue!important;
+    background-color: slateblue !important;
     font-family: "Ubuntu", monospace;
-    font-size: 0.75em!important;
+    font-size: 0.75em !important;
 }
 
 .alert-light {
-    border: 0.2rem solid slateblue!important;
+    border: 0.2rem solid slateblue !important;
 }
 
 .card-image {
@@ -163,11 +162,11 @@ a svg:hover path {
 }
 
 .card-border {
-    border-width: 0.2rem!important;
+    border-width: 0.2rem !important;
 }
 
 .card-border:hover {
-    border-color: slateblue!important;
+    border-color: slateblue !important;
 }
 
 /* style back to top icon */
@@ -175,13 +174,13 @@ a svg:hover path {
     background-color: royalblue;
 }
 
-.btn-close-white { 
-    position: absolute; 
+.btn-close-white {
+    position: absolute;
     right: 1rem;
 }
 
 .img-profile {
-    max-height: 75%!important;
+    max-height: 75% !important;
     max-width: 100%;
 }
 
