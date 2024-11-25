@@ -298,6 +298,7 @@ def links():
         },
         {"name": "mathNEWS", "url": "https://mathnews.uwaterloo.ca/"},
         {"name": "iWarrior", "url": "https://iwarrior.uwaterloo.ca/"},
+        {"name": "Waterloo Blockchain", "url": "https://www.waterlooblockchain.ca/"},
     ]
     stored_links.sort(key=lambda link: link["name"].lower())
     return render_template("links.html", links=stored_links)

@@ -63,9 +63,6 @@
             {% endfor %}
             <br>
             <h2 class="mb-4">All ({{ all|length }})</h2>
-            <div class="alert alert-light fade show" role="alert">
-                <span>Most of my projects should be open-sourced and available on GitHub. Let me know if you have any comments about them!</span>
-            </div>
             {% for i in range(0, all|length, 3) %}
                 <div class="row">
                     {% for j in range(i, i + 3) %}
@@ -157,9 +154,6 @@
                     </a>
                 </li>
             </ul>
-        </div>
-        <div class="text-center">
-            <p><small>Copyright Anthony Chen, 2019–2024.</small></p>
         </div>
     </footer>
 
