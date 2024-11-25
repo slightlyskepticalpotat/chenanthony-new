@@ -27,7 +27,7 @@
 .nav-link:hover,
 .navbar-brand:hover,
 .active {
-    background-color: royalblue;
+    background-color: royalblue !important;
 }
 
 .navbar-brand:hover {

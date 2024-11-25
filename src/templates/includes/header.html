@@ -1,0 +1,17 @@
+<nav class="navbar sticky-top navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand{{ ' active' if request.path == '/'}}" href="/">Anthony</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link{{ ' active' if request.path == '/projects'}}" href="/projects">Projects</a>
+                <a class="nav-link{{ ' active' if request.path == '/resume'}}" href="/resume">Résumé</a>
+                <a class="nav-link{{ ' active' if request.path == '/links'}}" href="/links">Links</a>
+                <a class="nav-link fas fa-sun fa-3x px-8 icon" id="btnSwitch"></span></a>
+            </div>
+        </div>
+    </div>
+</nav>
