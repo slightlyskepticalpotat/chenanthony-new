@@ -1,59 +1,72 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=.1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="{{ url_for("static", filename="img/favicon.ico") }}" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&family=Roboto+Mono&family=Lato&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="{{ url_for("static", filename="css/main.css") }}">
+    <link rel="icon" href="{{ url_for("static", filename="img/favicon.ico" ) }}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&family=Roboto+Mono&family=Lato&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/main.css" ) }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
     <title>Anthony</title>
     <nav class="navbar sticky-top navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="/">Anthony</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/projects">Projects</a>
-                <a class="nav-link" href="/resume">Résumé</a>
-                <a class="nav-link" href="/links">Links</a>
-                <a class="nav-link fas fa-sun fa-3x px-8 icon" id="btnSwitch"></span></a>
+            <a class="navbar-brand" href="/">Anthony</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="/projects">Projects</a>
+                    <a class="nav-link" href="/resume">Résumé</a>
+                    <a class="nav-link" href="/links">Links</a>
+                    <a class="nav-link fas fa-sun fa-3x px-8 icon" id="btnSwitch"></span></a>
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
-  </head>
-  
-    <div id="background">
+    </nav>
+</head>
+
+<div id="background">
+
     <body>
-            <div class="container">
-                <div class="page-header">
-                    <h1>Hello, I'm Anthony<span class="blinking">_</span></h1>
+        <div class="container">
+            <div class="page-header">
+                <h1>Hello, I'm Anthony<span class="blinking">_</span></h1>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <p>I'm studying Software Engineering at the University of Waterloo. Since you're here, you might be
+                        interested in my <a href="/projects">projects</a> or <a href="/resume">résumé</a>. Before
+                        university, I graduated from TOPS in 2023 after co-founding and leading our FIRST Robotics
+                        Competition <a href="https://mgcirobotics.com/">team</a> over 3 years.</p>
+                    <p>It's rewarding to work with new technology, especially in security and blockchain. You'll find me
+                        making occasional contributions to <a href="https://github.com/slightlyskepticalpotat">open
+                            source</a> because I want my code to impact others.</p>
+                    <p>I'm searching for fall 2025 internships! Previously, I've had the opportunity to intern at:</p>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="https://rubixdao.com">RubixDAO</a> (blockchain): May
+                            2021—Aug 2021</li>
+                        <li class="list-group-item"><a href="https://www.amazon.com">Amazon</a> (cloud compute): May
+                            2024—Aug 2024</li>
+                        <li class="list-group-item"><a href="https://www.jackallabs.io/">Jackal Labs</a> (blockchain):
+                            Jan 2025—Apr 2025</li>
+                    </ul>
+                </div>
+                <div class="text-center col-sm-3 my-auto">
+                    <img src="/static/img/fox.webp" class="rounded img-profile"
+                        alt="Network error, image failed to load.">
                 </div>
             </div>
-            <hr>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-9">
-                        <p>I'm studying Software Engineering at the University of Waterloo. Since you're here, you might be interested in my <a href="/projects">projects</a> or <a href="/resume">résumé</a>. Before university, I graduated from TOPS in 2023 after co-founding and leading our FIRST Robotics Competition <a href="https://mgcirobotics.com/">team</a> over 3 years.</p>
-                        <p>It's rewarding to work with new technology, especially in security and blockchain. You'll find me making occasional contributions to <a href="https://github.com/slightlyskepticalpotat">open source</a> because I want my code to impact others.</p>
-                        <p>I'm searching for fall 2025 internships! Previously, I've had the opportunity to intern at:</p>
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="https://rubixdao.com">RubixDAO</a> (blockchain): May 2021—Aug 2021</li>
-                            <li class="list-group-item"><a href="https://www.amazon.com">Amazon</a> (cloud compute): May 2024—Aug 2024</li>
-                            <li class="list-group-item"><a href="https://www.jackallabs.io/">Jackal Labs</a> (blockchain): Jan 2025—Apr 2025</li>
-                        </ul>
-                    </div>
-                    <div class="text-center col-sm-3 my-auto">
-                        <img src="/static/img/fox.webp" class="rounded img-profile" alt="Network error, image failed to load.">
-                    </div>    
-                </div>
-            </div>
+        </div>
     </body>
 
     <footer>
@@ -87,8 +100,11 @@
                 <li class="list-inline-item">
                     <a href="https://se-webring.xyz/">
                         <p class="invis-text">SE Webring</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="91 210 778 539.62" height="50" class="float-start px-3 icon pt-2">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M390.499 272.146V687.477C491.737 672.742 569.501 585.38 569.501 479.811C569.501 374.243 491.737 286.881 390.499 272.146ZM367.396 749.527C364.991 749.591 362.577 749.623 360.157 749.623C211.506 749.623 91 628.824 91 479.811C91 330.799 211.506 210 360.157 210C362.577 210 364.991 210.032 367.396 210.096C368.31 210.032 369.233 210 370.163 210H869V749.623H370.163C369.233 749.623 368.31 749.591 367.396 749.527ZM330.687 687.602V272.021C229.023 286.379 150.813 373.94 150.813 479.811C150.813 585.683 229.023 673.244 330.687 687.602ZM529.346 269.958H809.187V689.665H529.346C590.325 640.201 629.313 564.57 629.313 479.811C629.313 395.053 590.325 319.422 529.346 269.958Z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="91 210 778 539.62" height="50"
+                            class="float-start px-3 icon pt-2">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M390.499 272.146V687.477C491.737 672.742 569.501 585.38 569.501 479.811C569.501 374.243 491.737 286.881 390.499 272.146ZM367.396 749.527C364.991 749.591 362.577 749.623 360.157 749.623C211.506 749.623 91 628.824 91 479.811C91 330.799 211.506 210 360.157 210C362.577 210 364.991 210.032 367.396 210.096C368.31 210.032 369.233 210 370.163 210H869V749.623H370.163C369.233 749.623 368.31 749.591 367.396 749.527ZM330.687 687.602V272.021C229.023 286.379 150.813 373.94 150.813 479.811C150.813 585.683 229.023 673.244 330.687 687.602ZM529.346 269.958H809.187V689.665H529.346C590.325 640.201 629.313 564.57 629.313 479.811C629.313 395.053 590.325 319.422 529.346 269.958Z">
+                            </path>
                         </svg>
                     </a>
                 </li>
@@ -98,24 +114,30 @@
             <p><small>Copyright Anthony Chen, 2019–2024</small></p>
         </div>
     </footer>
-    </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
-    <script src="{{ url_for("static", filename="js/vanilla-back-to-top.min.js") }}"></script>
-        <script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/all.min.css"
+    integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+<script src="{{ url_for("static", filename="js/vanilla-back-to-top.min.js" ) }}"></script>
+<script>
     addBackToTop({
         diameter: 64,
         backgroundColor: "slateblue",
         textColor: "#ffffff"
     })
-    document.getElementById("btnSwitch").addEventListener("click", ()=>{
+    document.getElementById("btnSwitch").addEventListener("click", () => {
         if (document.documentElement.getAttribute("data-bs-theme") == "dark") {
             document.documentElement.setAttribute("data-bs-theme", "light")
         } else {
             document.documentElement.setAttribute("data-bs-theme", "dark")
         }
     })
-    </script>
+</script>
+
 </html>
