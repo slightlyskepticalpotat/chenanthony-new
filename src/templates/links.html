@@ -1,5 +1,4 @@
-<!doctype html>
-<html lang="en" data-bs-theme="dark">
+{% include 'includes/begin.html' %}
 
 <head>
     {% include 'includes/header_scripts.html' %}
@@ -8,12 +7,9 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="page-header">
-            <h1>Links<span class="blinking">_</span></h1>
-        </div>
-    </div>
-    <hr>
+    {% with title="Links" %}
+    {% include 'includes/title.html' %}
+    {% endwith %}
     <div class="container">
         <ul class="list-group">
             {% for link in links %}
