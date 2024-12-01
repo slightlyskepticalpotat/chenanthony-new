@@ -109,13 +109,6 @@ def projects():
             "tags": ["python", "cpp", "prng", "ctf", "mersenne-twister"],
         },
         {
-            "name": "exactum",
-            "info": "Flexible web monitoring tool for websites with no built-in notification system. Configured with YAML and supports desktop/email notifications and file logging.",
-            "url": "https://github.com/slightlyskepticalpotat/exactum",
-            "img": url_for("static", filename="img/exactum.webp"),
-            "tags": ["smtp", "desktop-app", "python", "monitoring", "email"],
-        },
-        {
             "name": "divoc",
             "info": "COVID-19 tracker that uses public APIs to calculate how many cases are within a certain distance of any address in Ontario. Includes self-assessment tool.",
             "url": "https://github.com/slightlyskepticalpotat/divoc",
@@ -212,13 +205,6 @@ def projects():
             "url": "https://github.com/AbdulBaseetShabi/GenNet",
             "img": url_for("static", filename="img/gennet.webp"),
             "tags": ["css", "html", "js", "python", "social-media"],
-        },
-        {
-            "name": "shad-tile",
-            "info": "Created for the SHAD program, this 15x15cm tile that showcases my interests and passions also doubles as a solderable breadboard. Created with KiCad.",
-            "url": "https://drive.google.com/drive/folders/1npTcp0RNNdb8etQtxm8TY5L2R35EkcST?usp=sharing",
-            "img": url_for("static", filename="img/shadtile.webp"),
-            "tags": ["hardware", "kicad", "pcb", "design", "ece"],
         },
         {
             "name": "the-roller",
